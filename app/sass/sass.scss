@@ -1,0 +1,226 @@
+$font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+$border: 1px solid #DBDBDB;
+
+
+$theme: default;
+
+
+
+body{
+    @if $theme == dark {
+        background-color: #1b1b1b;
+    } @else if $theme == default {
+        background-color: #FFF
+    }
+    @if $theme == dark {
+        span{ color: #FFF }
+    } @else if $theme == default {
+        span{ color: #000 }
+    }
+}
+header {
+    @if $theme == dark {
+        background-color: #000000;
+    } @else if $theme == default {
+        background-color: #FFF
+    }
+    z-index: 3;
+    width: 100%;
+    top: 0;
+    position: fixed;
+    height: 56px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .top-menu{
+        width: 1000px;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @if $theme == dark {
+            ion-icon{ color: #FFF }
+        } @else if $theme == default {
+            ion-icon{ color: #000 }
+        }
+        .logo{
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            ion-icon{ height: 19px; margin: 0 10px; }
+            img{ 
+                @if $theme == dark{
+                    filter: invert(100%)
+                }
+                height: 22px; 
+                padding: 0 10px; 
+                border-left: 1px solid rgb(201, 201, 201);
+            }
+        }
+        input{
+            color: #979797;
+            background-color: #FAFAFA;
+            border: $border;
+            height: 28px;
+            width: 215px;
+            left: 575px;
+            top: 13px;
+            border-radius: 3px;
+            text-align: center;
+        }
+        .menu{
+            ion-icon{ height: 19px; margin: 0 10px; font-size: 19px; }
+        }
+    }
+}
+
+main {
+    margin-top: 56px;
+    font-family: $font; 
+    display: flex;
+    justify-content: center;
+    .site-esquerda{
+        width: 600px;
+        #stories{
+            height: 118px;
+            width: 100%;
+            border-radius: 3px;
+            border: $border;
+            display: flex;
+            margin-top: 10px;
+            align-items: center;
+            overflow-x: scroll;
+            @if $theme == dark {
+                background-color: #000000;
+            } @else if $theme == default {
+                background-color: #FFF
+            }
+            &::-webkit-scrollbar {
+                height: 0px;
+            }
+            .storie{
+                margin: 6px 12px;
+                width: 64px;
+                .perfil-image {
+                    position: relative;
+                    width: 68px;
+                    height: 68px; 
+                    border-radius: 50%;
+                    .borda{
+                        width: 100%;
+                        z-index: 1;
+                    }
+                    .perfil{
+                        position: absolute;
+                        top: 6px; left: 6px;
+                        z-index: 2;
+                        width: 56px;
+                        height: 56px;
+                        border-radius: 50%;
+                    }
+                }
+            }
+        }
+        #feed{
+            .post{
+                margin: 24px 0;
+                border: $border;
+                border-radius: 3px;
+                .post-header{
+                    @if $theme == dark {
+                        background-color: #000000;
+                    } @else if $theme == default {
+                        background-color: #FFF
+                    }
+                    padding: 8px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    height: 60px;
+                    .post-options{
+                        display: flex;
+                        align-items: center;
+                        .perfil{ height: 32px; width: 32px; border-radius: 50%; }
+                        span{ font-weight: 500; margin-left: 10px;}
+                    }
+                    .post-optionsEnd{}
+                }
+                .post-image{
+                    img{height: 612px; width: 100%;}
+                }
+                .post-footer{
+                    height: 74px;
+                    padding: 10px;
+                    @if $theme == dark {
+                        background-color: #000000;
+                        color: #FFF;
+                    } @else if $theme == default {
+                        background-color: #FFF;
+                        color: #000;
+                    }
+                    .footer{
+                        font-size: 24px;
+                        display: flex;
+                        justify-content: space-between;
+                    }
+                    .curtidos{
+                        span{ font-weight: bold;}
+
+                    }
+
+                }
+            }
+        }
+    }
+    .site-direita{
+        width: 400px;
+        padding: 40px;
+        .meu-perfil{
+            display:flex;
+            margin-bottom: 32px;
+            .perfil{ 
+                height: 64px; 
+                width: 64px; 
+                border-radius: 50%;
+                margin-right: 20px; 
+            }
+            div{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                .mini{font-weight: 200; font-size: 12px;}
+                .name{font-weight: 700; font-size: 16px;}
+            }
+        }
+        .sugestoes{
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .lista-sugestoes {
+            padding: 10px;
+            .contato{
+                display:flex;
+                margin-bottom: 8px;
+                .perfil{ 
+                    height: 32px; 
+                    width: 32px; 
+                    border-radius: 50%;
+                    margin-right: 20px; 
+                }
+                div{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    .mini{font-weight: 200; font-size: 12px;}
+                    .name{font-weight: 700; font-size: 16px;}
+                }
+            }
+
+        }
+    }
+}
+
+footer {
+
+}

@@ -1,0 +1,209 @@
+body {
+  background-color: #FFF;
+}
+body span {
+  color: #000;
+}
+
+header {
+  background-color: #FFF;
+  z-index: 3;
+  width: 100%;
+  top: 0;
+  position: fixed;
+  height: 56px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .top-menu {
+  width: 1000px;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .top-menu ion-icon {
+  color: #000;
+}
+header .top-menu .logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+header .top-menu .logo ion-icon {
+  height: 19px;
+  margin: 0 10px;
+}
+header .top-menu .logo img {
+  height: 22px;
+  padding: 0 10px;
+  border-left: 1px solid rgb(201, 201, 201);
+}
+header .top-menu input {
+  color: #979797;
+  background-color: #FAFAFA;
+  border: 1px solid #DBDBDB;
+  height: 28px;
+  width: 215px;
+  left: 575px;
+  top: 13px;
+  border-radius: 3px;
+  text-align: center;
+}
+header .top-menu .menu ion-icon {
+  height: 19px;
+  margin: 0 10px;
+  font-size: 19px;
+}
+
+main {
+  margin-top: 56px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  display: flex;
+  justify-content: center;
+}
+main .site-esquerda {
+  width: 600px;
+}
+main .site-esquerda #stories {
+  height: 118px;
+  width: 100%;
+  border-radius: 3px;
+  border: 1px solid #DBDBDB;
+  display: flex;
+  margin-top: 10px;
+  align-items: center;
+  overflow-x: scroll;
+  background-color: #FFF;
+}
+main .site-esquerda #stories::-webkit-scrollbar {
+  height: 0px;
+}
+main .site-esquerda #stories .storie {
+  margin: 6px 12px;
+  width: 64px;
+}
+main .site-esquerda #stories .storie .perfil-image {
+  position: relative;
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+}
+main .site-esquerda #stories .storie .perfil-image .borda {
+  width: 100%;
+  z-index: 1;
+}
+main .site-esquerda #stories .storie .perfil-image .perfil {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  z-index: 2;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+}
+main .site-esquerda #feed .post {
+  margin: 24px 0;
+  border: 1px solid #DBDBDB;
+  border-radius: 3px;
+}
+main .site-esquerda #feed .post .post-header {
+  background-color: #FFF;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+}
+main .site-esquerda #feed .post .post-header .post-options {
+  display: flex;
+  align-items: center;
+}
+main .site-esquerda #feed .post .post-header .post-options .perfil {
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+}
+main .site-esquerda #feed .post .post-header .post-options span {
+  font-weight: 500;
+  margin-left: 10px;
+}
+main .site-esquerda #feed .post .post-image img {
+  height: 612px;
+  width: 100%;
+}
+main .site-esquerda #feed .post .post-footer {
+  height: 74px;
+  padding: 10px;
+  background-color: #FFF;
+  color: #000;
+}
+main .site-esquerda #feed .post .post-footer .footer {
+  font-size: 24px;
+  display: flex;
+  justify-content: space-between;
+}
+main .site-esquerda #feed .post .post-footer .curtidos span {
+  font-weight: bold;
+}
+main .site-direita {
+  width: 400px;
+  padding: 40px;
+}
+main .site-direita .meu-perfil {
+  display: flex;
+  margin-bottom: 32px;
+}
+main .site-direita .meu-perfil .perfil {
+  height: 64px;
+  width: 64px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+main .site-direita .meu-perfil div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+main .site-direita .meu-perfil div .mini {
+  font-weight: 200;
+  font-size: 12px;
+}
+main .site-direita .meu-perfil div .name {
+  font-weight: 700;
+  font-size: 16px;
+}
+main .site-direita .sugestoes {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+main .site-direita .lista-sugestoes {
+  padding: 10px;
+}
+main .site-direita .lista-sugestoes .contato {
+  display: flex;
+  margin-bottom: 8px;
+}
+main .site-direita .lista-sugestoes .contato .perfil {
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+main .site-direita .lista-sugestoes .contato div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+main .site-direita .lista-sugestoes .contato div .mini {
+  font-weight: 200;
+  font-size: 12px;
+}
+main .site-direita .lista-sugestoes .contato div .name {
+  font-weight: 700;
+  font-size: 16px;
+}
+
+/*# sourceMappingURL=sass.css.map */
